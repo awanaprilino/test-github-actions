@@ -1,0 +1,28 @@
+name: Formatting Test
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+
+jobs:
+  type_lint:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    name: Type Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Check out Git repository
+        run: echo "Test Type Lint"
+
+  code_style_lint:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    name: Code style lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Check out Git repository
+        run: echo "Test Code Style Lint"
