@@ -1,10 +1,6 @@
 name: Formatting Test
 
-on:
-  push:
-    branches:
-      - '*'
-      - '!master'
+on: push
 
 jobs:
   type_lint:
